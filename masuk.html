@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Masuk — mzakom digital</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fbfaf8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/config.js"></script>
+<script defer src="assets/site.js"></script>
+<script defer src="assets/member.js"></script>
+</head>
+<body class="sub" data-halaman="masuk">
+<a class="skip" href="#isi">Langsung ke isi</a>
+
+<header class="nav" id="nav">
+  <div class="nav__bar">
+    <div class="wrap nav__inner">
+      <a class="brand" href="./" aria-label="mzakom digital, beranda">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><path fill="currentColor" d="M1 13h3v8H1zM6 8h3v13H6zM11 2h3v19h-3zM16 10h2v11h-2zM20 5h2v16h-2z"/></svg>
+        mzakom digital
+      </a>
+      <a class="btn btn--sm btn--ghost" href="./#produk">Lihat produk</a>
+    </div>
+  </div>
+</header>
+
+<main id="isi" class="page">
+  <div class="wrap">
+    <div class="page__narrow page__form">
+      <h1>Masuk.</h1>
+      <p class="lede">Pakai nama pengguna dan kata sandi yang kamu terima setelah pembelian.</p>
+
+      <form class="form" id="form-masuk" novalidate>
+        <div class="field">
+          <label for="nama">Nama pengguna</label>
+          <input id="nama" name="nama" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+        </div>
+        <div class="field">
+          <label for="sandi">Kata sandi</label>
+          <input id="sandi" name="sandi" type="password" autocomplete="current-password" required>
+          <label class="check"><input type="checkbox" id="lihat"> Tampilkan kata sandi</label>
+        </div>
+        <p class="msg" id="msg" role="alert"></p>
+        <button class="btn" id="btn-masuk" type="submit">Masuk</button>
+      </form>
+
+      <p class="page__p page__after">Belum punya akun? <a href="./#produk">Lihat produk</a>, atau <a href="coba-gratis.html">coba 10 soal gratis</a> dulu.</p>
+      <p class="page__p" id="lupa" hidden>Lupa kata sandi? <a id="lupa-tautan" href="#">Hubungi kami</a> untuk reset.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <p class="foot__mark">mzakom digital</p>
+      <p class="foot__tag">Bahan latihan SKD dan alat bantu guru, dibuat satu per satu.</p>
+    </div>
+    <nav class="foot__links" aria-label="Kaki halaman">
+      <a href="./">Beranda</a>
+      <a href="coba-gratis.html">Coba gratis</a>
+      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      <a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a>
+    </nav>
+    <p class="foot__fine">© 2026 mzakom digital. Tidak berafiliasi dengan BKN atau instansi pemerintah mana pun. Dilarang menyebarluaskan isi produk tanpa izin.</p>
+  </div>
+</footer>
+</body>
+</html>

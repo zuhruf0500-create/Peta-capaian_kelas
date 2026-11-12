@@ -1,73 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peta Capaian Kelas</title>
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            max-width: 650px; 
-            margin: 40px auto; 
-            padding: 20px; 
-            line-height: 1.6; 
-            text-align: center;
-            color: #333;
-        }
-        h1 { color: #1a73e8; }
-        .btn { 
-            display: inline-block; 
-            padding: 14px 28px; 
-            background-color: #1a73e8; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            font-size: 16px; 
-            margin: 20px 0 10px 0; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn:hover { background-color: #1557b0; }
-        .note-box {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 12px 16px;
-            margin: 20px 0;
-            font-size: 13px;
-            color: #555;
-            text-align: left;
-        }
-        footer { margin-top: 40px; font-size: 14px; color: #666; }
-        footer a { color: #1a73e8; text-decoration: none; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>mzakom digital — toko produk digital untuk guru dan pejuang CPNS</title>
+<meta name="description" content="Toko mzakom digital: Tryout CPNS 2027 (550 soal SKD format resmi), game latihan yang dimainkan langsung di situs, ebook, dan alat bantu guru. Sekali bayar, akses lewat area member.">
+<meta name="theme-color" content="#f3f5ec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/beranda.css">
+<script defer src="assets/config.js"></script>
+<script defer src="assets/katalog.js"></script>
+<script defer src="assets/site.js"></script>
+<script defer src="assets/toko.js"></script>
+<script defer src="assets/beranda.js"></script>
 </head>
-<body>
+<body class="beranda">
+<a class="skip" href="#isi">Langsung ke isi</a>
 
-    <h1>Peta Capaian Kelas</h1>
-
-    <p>
-        Peta Capaian Kelas adalah aplikasi berbasis web yang digunakan untuk mengelola,
-        memantau, dan menganalisis perkembangan serta capaian pembelajaran siswa secara terstruktur.
-    </p>
-
-    <!-- TOMBOL DENGAN TARGET NEW TAB -->
-    <div>
-        <a href="https://script.google.com/macros/s/AKfycbzsHZdrtxZs5hWUSgip2N1dyLi_LEMVTs1Ya_yp1q5JWG6DWAUrBGXzmz3i8FQUcI70ng/exec" target="_blank" rel="noopener noreferrer" class="btn">
-            🚀 Masuk ke Aplikasi
-        </a>
+<header class="nav" id="nav">
+  <div class="nav__banner">
+    <p><span class="wide">Persiapan CPNS 2027? </span>10 soal SKD gratis, tanpa daftar.</p>
+    <a href="coba-gratis.html">Coba →</a>
+    <button class="nav__x" id="banner-x" aria-label="Tutup pengumuman">×</button>
+  </div>
+  <div class="nav__bar">
+    <div class="wrap nav__inner">
+      <a class="brand" href="./" aria-label="mzakom digital, beranda">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><path fill="currentColor" d="M1 13h3v8H1zM6 8h3v13H6zM11 2h3v19h-3zM16 10h2v11h-2zM20 5h2v16h-2z"/></svg>
+        mzakom digital
+      </a>
+      <nav class="nav__links" aria-label="Utama">
+        <a href="#produk">Produk</a>
+        <a href="cpns.html">Tryout CPNS</a>
+        <a href="rekomendasi.html">Rekomendasi</a>
+        <a href="afiliasi.html">Jadi afiliator</a>
+        <a href="#guru">Untuk guru</a>
+      </nav>
+      <a class="nav__masuk" href="masuk.html">Masuk</a>
+      <a class="btn btn--sm" href="#produk">Beli</a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-sheet">Menu</button>
     </div>
-
-    <!-- PETUNJUK KHUSUS PENGGUNA HP MULTI-AKUN -->
-    <div class="note-box">
-        💡 <b>Petunjuk Akses HP:</b><br>
-        Jika layar HP menampilkan pesan <i>"Tidak dapat membuka file"</i>, hal itu disebabkan oleh adanya beberapa akun Google aktif di HP Anda. Silakan <b>tekan & tahan tombol di atas</b>, lalu pilih <b>"Buka di tab baru"</b> atau gunakan <b>Mode Incognito</b>.
+    <div class="nav__sheet" id="nav-sheet" hidden>
+      <nav class="wrap" aria-label="Menu">
+        <a href="#produk">Produk</a>
+        <a href="cpns.html">Tryout CPNS</a>
+        <a href="rekomendasi.html">Rekomendasi</a>
+        <a href="afiliasi.html">Jadi afiliator</a>
+        <a href="#guru">Untuk guru</a>
+        <a href="masuk.html">Masuk</a>
+      </nav>
     </div>
+  </div>
+</header>
 
-    <footer>
-        <a href="kebijakan-privasi.html">Kebijakan Privasi</a> |
-        <a href="syarat-dan-ketentuan.html">Syarat & Ketentuan</a>
-    </footer>
+<main id="isi">
 
+  <section class="pembuka">
+    <div class="wrap">
+      <div class="pembuka__atas">
+        <h1 class="muncul"><span class="merek">mzakom<span class="merek__cincin"></span></span><span class="skip-teks"> digital</span></h1>
+        <p class="pembuka__sisi muncul" style="--i:1">Toko produk digital<br>untuk guru dan pejuang CPNS.<br>Sekali bayar, langsung dipakai.</p>
+      </div>
+      <div class="pembuka__aksi muncul" style="--i:2">
+        <a class="btn" href="#produk">Lihat produk</a>
+        <a class="tlink" href="coba-gratis.html">Coba 10 soal CPNS gratis →</a>
+        <p>Akses lewat area member setelah pembayaran terkonfirmasi.</p>
+      </div>
+    </div>
+    <canvas data-balok="gundukan" aria-hidden="true"></canvas>
+  </section>
+
+  <section class="lebih" aria-labelledby="lebih-h">
+    <div class="wrap">
+      <div class="lebih__atas">
+        <div class="lebih__head muncul">
+          <h2 id="lebih-h">Bukan sekadar toko file.<br>Tempat latihan.</h2>
+          <p>Setiap produk dibuat untuk dipakai: soal yang dikerjakan dengan waktu, game yang dimainkan, dan alat yang langsung jalan di browser. Semuanya buatan sendiri, dicek satu per satu.</p>
+        </div>
+        <canvas data-balok="pita" aria-hidden="true"></canvas>
+      </div>
+      <div class="tiga">
+        <article class="muncul" style="--i:0"><h3>Kerjakan<small>Soal dengan waktu dan skor</small></h3><span></span><p>Tryout 110 soal format SKD resmi, timer 100 menit, nilai langsung keluar, pembahasan tiap nomor.</p></article>
+        <article class="muncul" style="--i:1"><h3>Mainkan<small>Belajar tanpa terasa belajar</small></h3><span></span><p>Game tembak kaleng, kuis milyarder, dan ruang nalar: soal asli muncul di tengah permainan.</p></article>
+        <article class="muncul" style="--i:2"><h3>Pantau<small>Alat bantu guru</small></h3><span></span><p>Peta Capaian Kelas membaca nilai siswa dan menunjukkan siapa yang perlu dibantu, per kelas.</p></article>
+      </div>
+      <div class="lebih__kaki"><a class="btn" href="#produk">Lihat semua produk</a></div>
+    </div>
+  </section>
+
+  <section class="panggung" data-panggung aria-label="Isi produk">
+    <figure class="layang" data-kartu="tryout" style="--x:6%;--y:8%;--l:28%;--b:7px;--d:24s;--gx:2vw;--gy:5vh"><img src="assets/img/tryout-web.webp" alt="Tryout web: soal figural 9 kotak dengan timer" loading="lazy"></figure>
+    <figure class="layang" data-kartu="game" style="--x:60%;--y:6%;--l:30%;--b:5px;--d:20s;--gx:-3vw;--gy:4vh"><img src="assets/img/game-tembak.webp" alt="Game tembak kaleng di pasar malam" loading="lazy"></figure>
+    <figure class="layang" data-kartu="paket" style="--x:38%;--y:2%;--l:16%;--b:10px;--d:26s;--gx:2vw;--gy:6vh"><img src="assets/img/pdf-paket.webp" alt="Halaman PDF paket soal" loading="lazy"></figure>
+    <figure class="layang" data-kartu="video" style="--x:-3%;--y:52%;--l:30%;--b:9px;--d:28s;--gx:4vw;--gy:-3vh"><img src="assets/img/video-dek.webp" alt="Slide pembahasan soal berhitung langkah demi langkah" loading="lazy"></figure>
+    <figure class="layang" data-kartu="kuis" style="--x:70%;--y:50%;--l:28%;--b:8px;--d:22s;--gx:-2vw;--gy:-5vh"><img src="assets/img/game-kuis.webp" alt="Game kuis milyarder berisi soal TWK" loading="lazy"></figure>
+    <figure class="layang" data-kartu="ebook" style="--x:84%;--y:22%;--l:14%;--b:12px;--d:30s;--gx:-2vw;--gy:5vh"><img src="assets/img/pdf-ebook.webp" alt="Sampul ebook Tips dan Trik Lolos SKD" loading="lazy"></figure>
+    <figure class="layang" data-kartu="materi" style="--x:22%;--y:30%;--l:13%;--b:13px;--d:27s;--gx:3vw;--gy:-4vh"><img src="assets/img/pdf-materi.webp" alt="Halaman materi per tema" loading="lazy"></figure>
+    <div class="panggung__tengah" aria-live="polite">
+      <div class="panggung__teks" data-kartu="tryout"><h2>Tryout seperti CAT asli</h2><p>110 soal, 100 menit, nilai TWK, TIU, dan TKP langsung keluar.</p></div>
+      <div class="panggung__teks" data-kartu="paket"><h2>550 soal, pembahasan tiap nomor</h2><p>Lima paket format SKD resmi, kunci dicek ulang, bisa dicetak.</p></div>
+      <div class="panggung__teks" data-kartu="game"><h2>Belajar sambil main</h2><p>Kena kaleng, soal muncul. Jawab benar, skor naik.</p></div>
+      <div class="panggung__teks" data-kartu="video"><h2>Pembahasan langkah demi langkah</h2><p>Video per tipe soal: trik, contoh, dan cara menghitungnya.</p></div>
+      <div class="panggung__teks" data-kartu="kuis"><h2>Kuis milyarder dari soal asli</h2><p>Lima belas tingkat, tiga bantuan, satu akun.</p></div>
+      <div class="panggung__teks" data-kartu="ebook"><h2>Strategi, bukan teori</h2><p>Ebook rencana belajar 30 hari dan jebakan yang sering bikin gagal.</p></div>
+    </div>
+    <div class="panggung__bawah">
+      <div class="panggung__nav"><button type="button" data-ke="-1" aria-label="Sebelumnya">←</button><button type="button" data-ke="1" aria-label="Berikutnya">→</button></div>
+      <div class="panggung__bar" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <section class="toko" id="produk">
+    <div class="wrap">
+      <div class="toko__head muncul">
+        <h2>Pilih sesuai kebutuhanmu.</h2>
+        <p>Dibayar lewat Mayar. Nama pengguna dan kata sandi dikirim ke emailmu, lalu isinya terbuka di area member. Produk berikutnya otomatis masuk ke akun yang sama.</p>
+      </div>
+      <div data-toko="digital" data-kelompok></div>
+    </div>
+  </section>
+
+  <section class="toko" id="barang" data-bagian>
+    <div class="wrap">
+      <div class="toko__head">
+        <h2>Barang.</h2>
+        <p>Dikirim langsung dari gudang mitra ke alamatmu. Ongkir dihitung saat checkout, nomor resi dikirim lewat Mayar.</p>
+      </div>
+      <div data-toko="fisik"></div>
+    </div>
+  </section>
+
+  <section class="toko" id="rekomendasi" data-bagian>
+    <div class="wrap">
+      <div class="toko__head">
+        <h2>Rekomendasi.</h2>
+        <p class="ungkap">Tautan afiliasi: kalau kamu membeli lewat tautan ini, mzakom digital mendapat komisi dari platformnya. Harga untukmu tetap sama.</p>
+      </div>
+      <div data-toko="afiliasi" data-batas="4"></div>
+      <p class="page__after"><a class="tlink" href="rekomendasi.html">Semua rekomendasi →</a></p>
+    </div>
+  </section>
+
+  <section class="gelap" id="guru">
+    <div class="wrap gelap__grid">
+      <div class="gelap__intro muncul">
+        <h2>Untuk guru.</h2>
+        <p>Alat dan bahan ajar yang dipakai sendiri di kelas, lalu dirapikan supaya bisa dipakai guru lain.</p>
+        <a class="btn" href="https://script.google.com/macros/s/AKfycbzsHZdrtxZs5hWUSgip2N1dyLi_LEMVTs1Ya_yp1q5JWG6DWAUrBGXzmz3i8FQUcI70ng/exec" target="_blank" rel="noopener noreferrer">Buka Peta Capaian Kelas ↗</a>
+        <details>
+          <summary>Petunjuk akses di HP</summary>
+          <p>Jika layar HP menampilkan pesan “Tidak dapat membuka file”, penyebabnya ada beberapa akun Google yang aktif di HP. Tekan dan tahan tombol di atas, lalu pilih “Buka di tab baru”, atau gunakan mode Incognito.</p>
+        </details>
+      </div>
+      <ul class="gelap__daftar muncul" style="--i:1">
+        <li><b>Peta Capaian Kelas</b><span>Gratis · memantau dan menganalisis capaian belajar siswa per kelas · <a href="https://script.google.com/macros/s/AKfycbzsHZdrtxZs5hWUSgip2N1dyLi_LEMVTs1Ya_yp1q5JWG6DWAUrBGXzmz3i8FQUcI70ng/exec" target="_blank" rel="noopener noreferrer">buka</a></span></li>
+        <li><b>Modul Ajar Informatika</b><span>Segera · Kurikulum Merdeka per fase, lengkap LKPD dan asesmen</span></li>
+        <li><b>Informatika Party</b><span>Segera · 33 mode latihan Informatika SMP di browser</span></li>
+        <li><b>MindSprint AI</b><span>Segera · catatan pelajaran diubah jadi game</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="plate" id="afiliator">
+    <div class="wrap">
+      <div class="plate__grid">
+        <h2>Bagikan produk kami, dapat komisi.</h2>
+        <div class="plate__side">
+          <p>Daftar sebagai afiliator, dapat tautan khusus, dan terima komisi dari setiap pembelian lewat tautanmu. Pencatatan dan pembayaran komisi diurus Mayar.</p>
+          <a class="btn btn--ink" href="afiliasi.html">Cara jadi afiliator</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="tanya">
+    <div class="wrap faq__grid">
+      <h2>Yang biasa ditanyakan.</h2>
+      <div>
+        <details>
+          <summary>Setelah bayar, bagaimana cara membuka produknya?</summary>
+          <p>Setelah pembayaran di Mayar terkonfirmasi, nama pengguna dan kata sandi dikirim ke email yang kamu isi saat checkout, biasanya dalam beberapa menit. Masuk di halaman Masuk, ganti kata sandinya, lalu buka isinya di area member. Cek folder spam bila email belum terlihat.</p>
+        </details>
+        <details>
+          <summary>Saya membeli produk kedua. Apakah dapat akun baru?</summary>
+          <p>Tidak. Selama email checkout-nya sama, produk baru ditambahkan ke akun yang sudah ada.</p>
+        </details>
+        <details>
+          <summary>Game-nya dimainkan di mana?</summary>
+          <p>Langsung di situs ini, lewat browser di HP atau laptop. Tidak perlu memasang aplikasi.</p>
+        </details>
+        <details>
+          <summary>Apa itu bagian Rekomendasi?</summary>
+          <p>Barang dari toko lain (Shopee, TikTok Shop, dan sebagainya) yang kami rekomendasikan. Tautannya tautan afiliasi: pembelian lewat tautan itu memberi kami komisi dari platformnya, tanpa menambah harga untukmu. Pembayaran, pengiriman, dan retur diurus toko tersebut.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="ajak" aria-labelledby="ajak-h">
+    <canvas data-balok="gundukan" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="ajak__kartu muncul">
+        <svg class="ajak__ikon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 56 19 32 32 8 19Z" fill="#d9f58a"/><path d="M8 19 32 32v26L8 45Z" fill="#b9d377"/><path d="M56 19 32 32v26l24-13Z" fill="#f3bcd9"/></svg>
+        <h2 id="ajak-h">Ujian tidak menunggu.<br>Kamu juga jangan.</h2>
+        <p>Kerjakan 10 soal SKD gratis sekarang, tanpa daftar. Lihat sendiri seperti apa soal dan pembahasannya.</p>
+        <a class="btn" href="coba-gratis.html">Coba 10 soal gratis</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__merek">
+      <span class="merek" aria-hidden="true">mzakom<span class="merek__cincin"></span></span>
+      <p class="foot__tag">Toko produk digital<br>untuk guru dan pejuang CPNS.</p>
+    </div>
+    <div class="foot__grid">
+      <nav class="foot__links" aria-label="Kaki halaman">
+        <a href="masuk.html">Masuk</a>
+        <a href="cpns.html">Tryout CPNS</a>
+        <a href="#guru">Untuk guru</a>
+        <a href="rekomendasi.html">Rekomendasi</a>
+        <a href="afiliasi.html">Jadi afiliator</a>
+        <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+        <a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a>
+      </nav>
+      <p class="foot__fine">© 2026 mzakom digital. Tidak berafiliasi dengan BKN atau instansi pemerintah mana pun. Dilarang menyebarluaskan isi produk tanpa izin.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Area member — mzakom digital</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fbfaf8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/config.js"></script>
+<script defer src="assets/site.js"></script>
+<script defer src="assets/member.js"></script>
+</head>
+<body class="sub" data-halaman="member">
+<a class="skip" href="#isi-utama">Langsung ke isi</a>
+
+<header class="nav" id="nav">
+  <div class="nav__bar">
+    <div class="wrap nav__inner">
+      <a class="brand" href="./" aria-label="mzakom digital, beranda">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><path fill="currentColor" d="M1 13h3v8H1zM6 8h3v13H6zM11 2h3v19h-3zM16 10h2v11h-2zM20 5h2v16h-2z"/></svg>
+        mzakom digital
+      </a>
+      <button class="btn btn--sm btn--ghost" id="btn-keluar">Keluar</button>
+    </div>
+  </div>
+</header>
+
+<main id="isi-utama" class="page">
+  <div class="wrap">
+    <div class="page__narrow">
+      <p id="memuat" class="page__p" role="status">Memuat area member…</p>
+
+      <div id="akun" hidden>
+        <h1 id="halo">Halo.</h1>
+        <p class="page__p"><span class="chip" id="paket"></span></p>
+        <p class="msg" id="ganti-dulu" hidden>Kata sandimu masih kata sandi awal. <a href="#sandi">Ganti sekarang</a> supaya hanya kamu yang tahu.</p>
+
+        <h2 class="page__h2">Produkmu</h2>
+        <p class="msg" id="msg" role="alert"></p>
+        <div id="isi"></div>
+
+        <h2 class="page__h2" id="sandi">Ganti kata sandi</h2>
+        <form class="form page__form" id="form-sandi" novalidate>
+          <div class="field">
+            <label for="lama">Kata sandi sekarang</label>
+            <input id="lama" type="password" autocomplete="current-password" required>
+          </div>
+          <div class="field">
+            <label for="baru">Kata sandi baru</label>
+            <input id="baru" type="password" autocomplete="new-password" minlength="8" maxlength="72" required aria-describedby="baru-bantuan">
+            <small id="baru-bantuan">Minimal 8 karakter.</small>
+          </div>
+          <div class="field">
+            <label for="ulang">Ulangi kata sandi baru</label>
+            <input id="ulang" type="password" autocomplete="new-password" required>
+          </div>
+          <p class="msg" id="msg-sandi" role="alert"></p>
+          <button class="btn" id="btn-sandi" type="submit">Simpan kata sandi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <p class="foot__mark">mzakom digital</p>
+      <p class="foot__tag">Satu akun untuk satu orang. Terima kasih sudah tidak membagikannya.</p>
+    </div>
+    <nav class="foot__links" aria-label="Kaki halaman">
+      <a href="./">Beranda</a>
+      <a href="./#produk">Produk lain</a>
+      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      <a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a>
+    </nav>
+    <p class="foot__fine">© 2026 mzakom digital. Dilarang menyebarluaskan isi produk tanpa izin.</p>
+  </div>
+</footer>
+</body>
+</html>

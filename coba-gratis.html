@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coba 10 soal SKD gratis — mzakom digital</title>
+<meta name="description" content="Sepuluh soal contoh SKD dari Paket 1 Tryout CPNS 2027: 4 TWK, 3 TIU, 3 TKP. Sepuluh menit, skor dan pembahasan langsung keluar. Tanpa daftar.">
+<meta name="theme-color" content="#fbfaf8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/config.js"></script>
+<script defer src="assets/contoh-soal.js"></script>
+<script defer src="assets/site.js"></script>
+<script defer src="assets/coba.js"></script>
+</head>
+<body class="sub">
+<a class="skip" href="#isi">Langsung ke isi</a>
+
+<header class="nav" id="nav">
+  <div class="nav__bar">
+    <div class="wrap nav__inner">
+      <a class="brand" href="./" aria-label="mzakom digital, beranda">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><path fill="currentColor" d="M1 13h3v8H1zM6 8h3v13H6zM11 2h3v19h-3zM16 10h2v11h-2zM20 5h2v16h-2z"/></svg>
+        mzakom digital
+      </a>
+      <nav class="nav__links" aria-label="Utama">
+        <a href="cpns.html#isi-paket">Isi paket</a>
+        <a href="cpns.html#harga">Harga</a>
+        <a href="coba-gratis.html" aria-current="page">Coba gratis</a>
+        <a href="cpns.html#tanya">Tanya jawab</a>
+      </nav>
+      <a class="nav__masuk" href="masuk.html">Masuk</a>
+      <a class="btn btn--sm" href="cpns.html#harga">Beli</a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-sheet">Menu</button>
+    </div>
+    <div class="nav__sheet" id="nav-sheet" hidden>
+      <nav class="wrap" aria-label="Menu">
+        <a href="./">Beranda</a>
+        <a href="cpns.html#isi-paket">Isi paket</a>
+        <a href="cpns.html#harga">Harga</a>
+        <a href="cpns.html#tanya">Tanya jawab</a>
+        <a href="masuk.html">Masuk</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="isi" class="page">
+  <div class="wrap">
+    <div class="page__narrow">
+
+      <section id="layar-mulai">
+        <h1>Sepuluh soal, sepuluh menit.</h1>
+        <p class="lede">Empat TWK, tiga TIU, dan tiga TKP dari Paket 1. Skor dan pembahasannya keluar begitu kamu selesai. Tidak perlu daftar, dan jawabanmu tidak dikirim ke mana pun.</p>
+        <button class="btn" id="btn-mulai">Mulai mengerjakan</button>
+        <noscript><p class="msg" data-tone="error">Halaman ini membutuhkan JavaScript untuk menampilkan soal.</p></noscript>
+      </section>
+
+      <section id="layar-kuis" class="quiz" hidden>
+        <div class="panel">
+          <div class="quiz__top">
+            <span class="chip" id="q-chip"></span>
+            <span><span id="q-no"></span> · <b class="mono" id="timer" aria-label="Sisa waktu">10:00</b></span>
+          </div>
+          <p class="quiz__q" id="q-teks"></p>
+          <div class="quiz__media" id="q-media"></div>
+          <fieldset id="q-opsi"></fieldset>
+          <div class="quiz__nav">
+            <button class="btn btn--ghost" id="btn-prev">Sebelumnya</button>
+            <button class="btn" id="btn-next">Berikutnya</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="layar-hasil" hidden>
+        <h1>Skormu.</h1>
+        <div class="score" id="skor"></div>
+        <p class="lede" id="ringkas"></p>
+        <p class="page__p">Ini sepuluh dari 550 soal. Paket lengkapnya berisi lima tryout 110 soal format SKD resmi dengan pembahasan seperti di bawah, ditambah ebook, materi, video course, dan game.</p>
+        <div class="hero__cta">
+          <a class="btn" href="cpns.html#harga">Lihat harga</a>
+          <button class="btn btn--ghost" id="btn-ulang">Ulangi</button>
+        </div>
+        <div class="review" id="ulasan"></div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <p class="foot__mark">mzakom digital</p>
+      <p class="foot__tag">Bahan latihan SKD dan alat bantu guru, dibuat satu per satu.</p>
+    </div>
+    <nav class="foot__links" aria-label="Kaki halaman">
+      <a href="./">Beranda</a>
+      <a href="masuk.html">Masuk</a>
+      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      <a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a>
+    </nav>
+    <p class="foot__fine">© 2026 mzakom digital. Tidak berafiliasi dengan BKN atau instansi pemerintah mana pun. Dilarang menyebarluaskan isi produk tanpa izin.</p>
+  </div>
+</footer>
+</body>
+</html>
