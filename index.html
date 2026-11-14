@@ -15,6 +15,8 @@
 <script defer src="assets/katalog.js"></script>
 <script defer src="assets/site.js"></script>
 <script defer src="assets/toko.js"></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }</script>
+<script type="module" src="assets/showroom.js"></script>
 <script defer src="assets/beranda.js"></script>
 </head>
 <body class="beranda">
@@ -117,7 +119,19 @@
         <h2>Pilih sesuai kebutuhanmu.</h2>
         <p>Dibayar lewat Mayar. Nama pengguna dan kata sandi dikirim ke emailmu, lalu isinya terbuka di area member. Produk berikutnya otomatis masuk ke akun yang sama.</p>
       </div>
-      <div data-toko="digital" data-kelompok></div>
+      <div class="showroom" data-showroom hidden>
+        <canvas tabindex="0" aria-label="Etalase 3D produk. Panah kiri dan kanan untuk berpindah, Enter untuk melihat dekat."></canvas>
+        <div class="showroom__info" data-info aria-live="polite"></div>
+        <div class="showroom__nav">
+          <button type="button" data-ke="-1" aria-label="Produk sebelumnya">←</button>
+          <span data-hitung title="Geser atau ketuk produk untuk melihat dekat">01 / 01</span>
+          <button type="button" data-ke="1" aria-label="Produk berikutnya">→</button>
+        </div>
+      </div>
+      <details class="toko__daftar" data-daftar-produk open>
+        <summary>Lihat sebagai daftar</summary>
+        <div data-toko="digital" data-kelompok></div>
+      </details>
     </div>
   </section>
 

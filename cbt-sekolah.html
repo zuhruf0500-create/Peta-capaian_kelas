@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>mzakom digital — CBT Sekolah: aplikasi ujian online untuk sekolah, pasang sendiri, tanpa biaya server</title>
+<meta name="description" content="Template aplikasi ujian berbasis komputer (CBT) untuk sekolah: pilihan ganda dan esai, kartu peserta, alarm keluar layar, pantauan langsung, koreksi esai, ekspor Excel. Pakai nama dan logo sekolah sendiri. Berjalan di layanan gratis GitHub, Vercel, dan Supabase.">
+<meta name="theme-color" content="#fbfaf8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/config.js"></script>
+<script defer src="assets/katalog.js"></script>
+<script defer src="assets/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#isi">Langsung ke isi</a>
+
+<header class="nav" id="nav">
+  <div class="nav__banner">
+    <p><span class="wide">Untuk sekolah: </span>ujian dari HP siswa, nilai keluar otomatis.</p>
+    <a href="#harga">Harga →</a>
+    <button class="nav__x" id="banner-x" aria-label="Tutup pengumuman">×</button>
+  </div>
+  <div class="nav__bar">
+    <div class="wrap nav__inner">
+      <a class="brand" href="./" aria-label="mzakom digital, beranda">
+        <svg viewBox="0 0 22 22" aria-hidden="true"><path fill="currentColor" d="M1 13h3v8H1zM6 8h3v13H6zM11 2h3v19h-3zM16 10h2v11h-2zM20 5h2v16h-2z"/></svg>
+        mzakom digital
+      </a>
+      <nav class="nav__links" aria-label="Utama">
+        <a href="./">Semua produk</a>
+        <a href="#isi-paket">Fitur</a>
+        <a href="#cara">Cara pasang</a>
+        <a href="#harga">Harga</a>
+        <a href="#tanya">Tanya jawab</a>
+      </nav>
+      <a class="nav__masuk" href="masuk.html">Masuk</a>
+      <a class="btn btn--sm" href="#harga">Beli</a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-sheet">Menu</button>
+    </div>
+    <div class="nav__sheet" id="nav-sheet" hidden>
+      <nav class="wrap" aria-label="Menu">
+        <a href="./">Semua produk</a>
+        <a href="#isi-paket">Fitur</a>
+        <a href="#cara">Cara pasang</a>
+        <a href="#harga">Harga</a>
+        <a href="#tanya">Tanya jawab</a>
+        <a href="masuk.html">Masuk</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="isi">
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <h1 class="reveal" style="--i:0">Ujian sekolah dari <span class="hl">HP siswa</span>. Nilai keluar sendiri.</h1>
+        <p class="lede reveal" style="--i:1">Aplikasi CBT dengan nama dan logo sekolah Anda. Pilihan ganda dan esai, kartu peserta, alarm saat siswa keluar layar, pantauan langsung, dan ekspor nilai ke Excel.</p>
+        <div class="hero__cta reveal" style="--i:2">
+          <a class="btn" href="#harga">Lihat harga</a>
+          <a class="tlink" href="#isi-paket">Lihat fiturnya →</a>
+        </div>
+        <p class="hero__note reveal" style="--i:3">Sekali bayar. Berjalan di paket gratis GitHub, Vercel, dan Supabase, tanpa sewa server.</p>
+      </div>
+      <figure class="reveal" style="--i:2">
+        <div class="shot"><img src="assets/img/cbt-beranda.webp" width="1100" height="619" alt="Halaman depan aplikasi CBT: judul Ujian Digital dengan nama sekolah dan kotak masuk siswa berisi Nomor Ujian dan Kode Ujian"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="Isi produk dalam angka">
+    <div class="wrap facts__grid">
+      <div class="fact"><b>2</b><span>jenis soal: pilihan ganda dan esai/uraian</span></div>
+      <div class="fact"><b>8</b><span>kartu peserta per lembar A4, dicetak langsung dari aplikasi</span></div>
+      <div class="fact"><b>1</b><span>file pengaturan untuk nama, logo, kelas, dan mapel</span></div>
+      <div class="fact"><b>Rp0</b><span>biaya bulanan pada paket gratis ketiga layanan</span></div>
+      <div class="fact"><b>7</b><span>menit video tutorial, plus panduan bergambar</span></div>
+    </div>
+  </section>
+
+  <section class="tour" id="isi-paket">
+    <div class="wrap">
+      <h2 class="tour__head">Yang terjadi dari daftar siswa sampai nilai.</h2>
+
+      <article class="tour__item">
+        <figure class="tour__fig">
+          <div class="shot"><img src="assets/img/cbt-kartu.webp" width="1100" height="619" loading="lazy" alt="Lembar kartu peserta ujian: tiap kartu berisi logo, nama sekolah, nama siswa, kelas, dan nomor ujian"></div>
+          <figcaption>Kartu peserta, delapan per halaman A4.</figcaption>
+        </figure>
+        <div class="tour__text">
+          <h3>Siswa masuk dengan kartu peserta</h3>
+          <p>Tempel daftar siswa dari Excel, klik satu tombol, dan setiap siswa mendapat nomor ujian. Cetak kartunya, bagikan. Saat ujian siswa cukup mengetik nomor ujian dan kode dari papan tulis; nama dan kelas terisi sendiri.</p>
+          <dl class="spec">
+            <div><dt>Impor</dt><dd>salin-tempel dari Excel: Nama, Kelas per baris</dd></div>
+            <div><dt>Kartu</dt><dd>nama, kelas, nomor ujian, logo sekolah</dd></div>
+            <div><dt>Sekali kerja</dt><dd>satu nomor hanya bisa mengirim satu kali per ujian</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="tour__item">
+        <figure class="tour__fig">
+          <div class="shots shots--3">
+            <div class="shot"><img src="assets/img/cbt-hp-masuk.webp" width="420" height="877" loading="lazy" alt="Layar HP: kotak masuk siswa dengan Nomor Ujian dan Kode Ujian"></div>
+            <div class="shot"><img src="assets/img/cbt-hp-esai.webp" width="420" height="877" loading="lazy" alt="Layar HP: soal esai tentang fotosintesis dengan kotak jawaban"></div>
+            <div class="shot"><img src="assets/img/cbt-hp-alarm.webp" width="420" height="877" loading="lazy" alt="Layar HP: pita merah ALARM, siswa keluar dari layar ujian"></div>
+          </div>
+          <figcaption>Masuk, mengerjakan esai, dan alarm saat keluar layar.</figcaption>
+        </figure>
+        <div class="tour__text">
+          <h3>Dikerjakan di HP, dijaga alarm</h3>
+          <p>Soal dan pilihan jawaban diacak untuk tiap siswa. Kalau siswa membuka aplikasi lain atau keluar layar penuh, alarm berbunyi keras dan pelanggarannya tercatat. Dua kali keluar, ujian terkunci sampai pengawas membukanya.</p>
+          <dl class="spec">
+            <div><dt>Simpan</dt><dd>jawaban tersimpan otomatis; HP mati bisa dilanjutkan</dd></div>
+            <div><dt>Soal</dt><dd>teks, gambar, bacaan bersama, rumus</dd></div>
+            <div><dt>Sinyal putus</dt><dd>jawaban tertahan di HP, ada tombol Kirim Ulang</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="tour__item">
+        <figure class="tour__fig">
+          <div class="shot"><img src="assets/img/cbt-monitor.webp" width="1100" height="619" loading="lazy" alt="Monitor Ujian Live: tabel peserta dengan progres soal, status koneksi, dan kolom pelanggaran"></div>
+          <figcaption>Monitor ujian: progres, koneksi, dan pelanggaran tiap siswa.</figcaption>
+        </figure>
+        <div class="tour__text">
+          <h3>Dipantau guru secara langsung</h3>
+          <p>Dari laptop pengawas terlihat siapa yang sedang mengerjakan, sudah sampai soal ke berapa, koneksinya, dan siapa yang keluar layar. Ujian bisa dijadwalkan dengan jam buka dan jam tutup.</p>
+          <dl class="spec">
+            <div><dt>Ujian</dt><dd>kode unik per ujian, durasi, KKM, jam buka/tutup</dd></div>
+            <div><dt>Pengawas</dt><dd>buka kunci siswa dari menu Monitor</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="tour__item">
+        <figure class="tour__fig">
+          <div class="shot"><img src="assets/img/cbt-koreksi.webp" width="1100" height="619" loading="lazy" alt="Jendela Koreksi Esai: pertanyaan, pedoman jawaban, jawaban siswa, dan skor 0 sampai 100"></div>
+          <figcaption>Koreksi esai dengan pedoman jawaban di sampingnya.</figcaption>
+        </figure>
+        <div class="tour__text">
+          <h3>Dinilai otomatis, esai dikoreksi guru</h3>
+          <p>Pilihan ganda dinilai di server begitu siswa mengumpulkan. Esai dikoreksi guru dengan skor 0–100, lalu nilai akhir dihitung ulang. Semua nilai bisa diunduh ke Excel, CSV, atau dicetak.</p>
+          <dl class="spec">
+            <div><dt>Keamanan</dt><dd>kunci jawaban tidak pernah dikirim ke HP siswa</dd></div>
+            <div><dt>Akun guru</dt><dd>email + password, tidak tertulis di kode</dd></div>
+            <div><dt>Ekspor</dt><dd>Excel, CSV, Print/PDF</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="tour" id="cara">
+    <div class="wrap">
+      <h2 class="tour__head">Cara pasangnya, sekitar 30 menit.</h2>
+      <article class="tour__item">
+        <figure class="tour__fig">
+          <div class="shot"><img src="assets/img/cbt-siswa.webp" width="1100" height="619" loading="lazy" alt="Menu Daftar Siswa: tombol Buatkan Akun Otomatis, Cetak Kartu Peserta, dan tabel nomor ujian"></div>
+          <figcaption>Setelah tayang, pekerjaan sehari-hari dilakukan dari menu aplikasi, tanpa menyentuh kode.</figcaption>
+        </figure>
+        <div class="tour__text">
+          <h3>Lima langkah, semuanya ada di video</h3>
+          <dl class="spec">
+            <div><dt>1. Daftar</dt><dd>akun GitHub, lalu masuk ke Vercel dan Supabase memakai akun itu. Semuanya gratis.</dd></div>
+            <div><dt>2. Database</dt><dd>buat proyek Supabase, buat akun guru, tempel database.sql, klik Run.</dd></div>
+            <div><dt>3. Identitas</dt><dd>isi nama sekolah, kelas, mapel, dan alamat database di satu file; ganti logo.</dd></div>
+            <div><dt>4. Unggah</dt><dd>seret isi folder ke repository GitHub baru.</dd></div>
+            <div><dt>5. Tayang</dt><dd>impor repository di Vercel, klik Deploy. Situs sekolah online.</dd></div>
+          </dl>
+          <p>Tidak sempat? Pilih paket <b>Template + Jasa Pasang</b>, kami yang memasangkan.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="harga" id="harga">
+    <div class="wrap">
+      <div class="harga__head">
+        <h2>Dua pilihan, aplikasinya sama.</h2>
+        <p>Bedanya hanya siapa yang memasang.</p>
+      </div>
+
+      <div class="tier">
+        <span class="bars" aria-hidden="true"><i class="on"></i><i></i></span>
+        <h3>Template</h3>
+        <p class="tier__isi"><b>Kode aplikasi, database.sql, panduan bergambar, dan video tutorial.</b> Dipasang sendiri.</p>
+        <span class="tier__price mono">Rp149.000</span>
+        <a class="btn" data-beli="cbt-sekolah" href="#">Beli Template</a>
+      </div>
+      <div class="tier">
+        <span class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i></span>
+        <h3>+ Jasa Pasang</h3>
+        <p class="tier__isi">Semua isi Template, <b>ditambah kami pasangkan</b>: database, akun guru, nama dan logo sekolah, sampai situs online.</p>
+        <span class="tier__price mono">Rp399.000</span>
+        <a class="btn" data-beli="cbt-sekolah-pasang" href="#">Beli + Pasang</a>
+      </div>
+
+      <p class="harga__note">Pembayaran lewat Mayar. Paket Template: tautan unduhan dikirim ke email setelah pembayaran terkonfirmasi. Paket Jasa Pasang: kami menghubungi lewat email yang dipakai saat membayar untuk menjadwalkan pemasangan. Satu pembelian untuk satu sekolah.</p>
+    </div>
+  </section>
+
+  <section class="faq" id="tanya">
+    <div class="wrap faq__grid">
+      <h2>Yang biasa ditanyakan.</h2>
+      <div>
+        <details>
+          <summary>Apakah ada biaya bulanan?</summary>
+          <p>Tidak dari kami. Aplikasi berjalan di paket gratis GitHub, Vercel, dan Supabase. Paket gratis Supabase memuat database 500 MB dan penyimpanan 1 GB, cukup untuk soal dan nilai satu sekolah. Proyek Supabase gratis dijeda bila tujuh hari tidak dipakai; cukup klik Restore di dasbornya.</p>
+        </details>
+        <details>
+          <summary>Harus bisa coding?</summary>
+          <p>Tidak. Yang diubah hanya isian nama sekolah, kelas, mapel, dan alamat database di satu file, mengikuti video dan panduan bergambar. Kalau tidak sempat, pilih paket Jasa Pasang.</p>
+        </details>
+        <details>
+          <summary>Bisa untuk SD, SMA, atau SMK?</summary>
+          <p>Bisa. Daftar tingkat, kelas, dan mata pelajaran diatur bebas di file pengaturan, misalnya X, XI, dan XII.</p>
+        </details>
+        <details>
+          <summary>Siswa memakai HP sendiri?</summary>
+          <p>Ya. Siswa cukup membuka alamat situs di browser HP atau komputer sekolah. Kalau sekolah punya aplikasi Android sendiri, tautannya bisa dipasang di halaman masuk.</p>
+        </details>
+        <details>
+          <summary>Seberapa aman datanya?</summary>
+          <p>Siswa tidak bisa membaca kunci jawaban, data siswa lain, maupun nilai; nilai pilihan ganda dihitung di server. Hanya email guru yang didaftarkan yang bisa mengelola data. Database ada di akun Supabase milik sekolah, bukan di server kami.</p>
+        </details>
+        <details>
+          <summary>Boleh dipakai beberapa sekolah?</summary>
+          <p>Satu pembelian untuk satu sekolah. Untuk beberapa sekolah sekaligus, hubungi kami lewat kontak di Syarat &amp; Ketentuan.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <p class="foot__mark">mzakom digital</p>
+      <p class="foot__tag">Bahan latihan SKD dan alat bantu guru, dibuat satu per satu.</p>
+    </div>
+    <nav class="foot__links" aria-label="Kaki halaman">
+      <a href="./">Semua produk</a>
+      <a href="masuk.html">Masuk</a>
+      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      <a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a>
+    </nav>
+    <p class="foot__fine">© 2026 mzakom digital. GitHub, Vercel, dan Supabase adalah merek milik pemiliknya masing-masing dan tidak berafiliasi dengan mzakom digital.</p>
+  </div>
+</footer>
+
+<aside class="buybar" id="buybar" aria-label="Beli">
+  <span>Mulai <b class="mono">Rp149.000</b></span>
+  <a class="btn btn--sm" href="#harga">Lihat harga</a>
+</aside>
+
+</body>
+</html>

@@ -29,6 +29,8 @@
       (detail ? '<a class="tlink" href="' + esc(detail) + '">Detail →</a>' : "") + "</div></article>";
   }
 
+  window.TOKO = { esc, rupiah, amanUrl, tombol }; // dipakai showroom.js
+
   document.querySelectorAll("[data-toko]").forEach((el) => {
     let daftar = KATALOG.filter((p) => p.jenis === el.dataset.toko);
     if (el.dataset.batas) daftar = daftar.slice(0, Number(el.dataset.batas));
