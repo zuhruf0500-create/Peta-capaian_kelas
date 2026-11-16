@@ -5,37 +5,165 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Masuk — mzakom digital</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#fbfaf8">
+<meta name="theme-color" content="#0b0b0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script defer src="assets/config.js"></script>
-<script defer src="assets/site.js"></script>
 <script defer src="assets/member.js"></script>
-</head>
-<body class="sub" data-halaman="masuk">
-<a class="skip" href="#isi">Langsung ke isi</a>
+<style>
+:root {
+  --hitam: #0b0b0c; --putih: #ffffff; --abu: #5b5f66; --garis: #e4e4e7;
+  --merah: #ef2b3c; --biru: #1f3cf2; --hijau: #22d39a; --koral: #ff6a4d; --kuning: #ffd23f;
+  --r: 22px; --tepi: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--hitam); color: var(--putih); font: 400 16px/1.55 "Archivo", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; }
+.skip { position: absolute; left: -999px; top: 8px; background: #fff; color: #000; padding: 8px 12px; border-radius: 8px; z-index: 50; }
+.skip:focus { left: 8px; }
+.display { font-family: "Archivo Black", "Archivo", sans-serif; font-weight: 400; letter-spacing: -0.02em; line-height: .92; margin: 0; }
 
-<header class="nav" id="nav">
-  <div class="nav__bar">
-    <div class="wrap nav__inner">
-      <a class="brand" href="./" aria-label="mzakom digital, beranda">
-        <svg viewBox="0 0 22 22" aria-hidden="true"><path fill="currentColor" d="M1 13h3v8H1zM6 8h3v13H6zM11 2h3v19h-3zM16 10h2v11h-2zM20 5h2v16h-2z"/></svg>
-        mzakom digital
-      </a>
-      <a class="btn btn--sm btn--ghost" href="./#produk">Lihat produk</a>
-    </div>
+/* bilah berjalan */
+.pita { background: var(--merah); color: #fff; overflow: hidden; white-space: nowrap; font-size: 13px; font-weight: 600; }
+.pita__isi { display: inline-flex; gap: 28px; padding: 7px 0; animation: jalan 32s linear infinite; }
+.pita__isi span::after { content: "✦"; margin-left: 28px; opacity: .8; }
+@keyframes jalan { to { transform: translateX(-50%); } }
+
+/* nav */
+.nav { position: absolute; left: 0; right: 0; z-index: 5; }
+.nav__dalam { max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 24px; }
+.logo { font-family: "Archivo Black"; font-size: 22px; text-decoration: none; letter-spacing: -0.03em; }
+.nav__tautan { display: flex; gap: 26px; margin: 0 auto; font-size: 14px; font-weight: 500; }
+.nav__tautan a { text-decoration: none; opacity: .92; }
+.nav__tautan a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.nav__kanan { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.nav__tautan + .nav__kanan { margin-left: 0; }
+.nav__kanan svg { width: 18px; height: 18px; }
+
+/* hero */
+.hero { position: relative; margin: 10px; border-radius: var(--r); overflow: hidden; min-height: 760px; padding-bottom: 70px;
+  background: linear-gradient(180deg, var(--biru) 0%, #1aa6c9 38%, var(--hijau) 58%, var(--koral) 100%); }
+.hero__judul { position: relative; z-index: 2; text-align: center; font-size: clamp(56px, 10.5vw, 150px); padding: 120px 16px 0; text-shadow: 0 6px 30px rgba(0,0,0,.18); }
+.hero__sub { position: relative; z-index: 2; text-align: center; font-size: 17px; font-weight: 600; margin: 18px auto 0; max-width: 460px; padding: 0 16px; }
+.terbang { position: absolute; z-index: 1; border-radius: 16px; background: #fff; padding: 6px; box-shadow: 0 30px 60px rgba(0,0,0,.35); animation: apung 7s ease-in-out infinite; }
+.terbang img { display: block; width: 100%; border-radius: 11px; }
+.t1 { width: 300px; left: 4%; top: 300px; --rot: -14deg; }
+.t2 { width: 250px; right: 5%; top: 250px; --rot: 12deg; animation-delay: -2s; }
+.t3 { width: 220px; left: 13%; bottom: 40px; --rot: 9deg; animation-delay: -4s; }
+.t4 { width: 240px; right: 12%; bottom: 60px; --rot: -10deg; animation-delay: -1s; }
+@keyframes apung { 0%, 100% { transform: translateY(0) rotate(var(--rot)); } 50% { transform: translateY(-16px) rotate(calc(var(--rot) + 2deg)); } }
+
+/* kartu masuk */
+.kartu { position: relative; z-index: 3; background: #fff; color: var(--hitam); border-radius: var(--r); width: min(440px, calc(100% - 32px)); margin: 40px auto 0; padding: 30px 28px 26px; box-shadow: 0 40px 80px rgba(0,0,0,.3); }
+.kartu h2 { font-size: 30px; text-align: center; margin: 0 0 6px; }
+.kartu .lede { text-align: center; color: var(--abu); font-size: 14px; margin: 0 0 20px; }
+.field { margin-bottom: 14px; }
+.field > label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.field input[type=text], .field input[type=password] { width: 100%; border: 0; border-bottom: 1.5px solid #c9c9cf; padding: 10px 2px; font: inherit; font-size: 16px; background: transparent; color: var(--hitam); border-radius: 0; }
+.field input:focus { outline: none; border-bottom-color: var(--biru); }
+.check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--abu); margin-top: 10px; cursor: pointer; }
+.msg { min-height: 1.2em; color: #c81e2d; font-size: 14px; margin: 4px 0 10px; }
+.tombol { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 13px 26px; font: 600 15px "Archivo", sans-serif; text-decoration: none; cursor: pointer; border: 1.5px solid currentColor; background: transparent; color: inherit; }
+.tombol--isi { background: var(--hitam); color: #fff; border-color: var(--hitam); width: 100%; }
+.tombol--isi:hover { background: var(--biru); border-color: var(--biru); }
+.tombol:disabled { opacity: .6; cursor: wait; }
+.tombol:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--kuning); outline-offset: 2px; }
+.kartu__bawah { font-size: 13.5px; color: var(--abu); text-align: center; margin: 16px 0 0; }
+.kartu__bawah a { color: var(--hitam); font-weight: 600; }
+.catatan { font-size: 12.5px; background: #f4f4f5; border-radius: 12px; padding: 10px 12px; color: var(--abu); margin: 14px 0 0; }
+
+/* isi member */
+.bagian { max-width: 1240px; margin: 0 auto; padding: 90px 32px 40px; }
+.bagian__judul { text-align: center; font-size: clamp(34px, 5vw, 56px); margin-bottom: 44px; }
+.bagian__judul small { display: block; font: 600 15px "Archivo", sans-serif; letter-spacing: 0; margin-bottom: 10px; color: var(--hijau); }
+.ubin { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.ubin a { text-decoration: none; display: block; }
+.ubin figure { margin: 0; aspect-ratio: 4 / 5; border-radius: var(--r); overflow: hidden; display: grid; place-items: center; padding: 22px; }
+.ubin figure img { width: 100%; border-radius: 12px; transform: rotate(-4deg); box-shadow: 0 24px 50px rgba(0,0,0,.5); transition: transform .4s ease; }
+.ubin a:hover figure img { transform: rotate(0) scale(1.03); }
+.ubin__kaki { display: flex; justify-content: space-between; align-items: center; padding: 16px 4px; font-size: 18px; font-weight: 500; }
+.panah { width: 38px; height: 38px; border: 1.5px solid #fff; border-radius: 50%; display: grid; place-items: center; }
+.w1 { background: linear-gradient(160deg, #ff3d6e, #5b1236); }
+.w2 { background: linear-gradient(160deg, #2f3bd8, #0e0e2a); }
+.w3 { background: linear-gradient(160deg, #ffd23f, #6b4e00); }
+
+/* ajakan */
+.ajakan { max-width: 1240px; margin: 40px auto 0; padding: 0 32px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 32px; align-items: center; }
+.ajakan__kartu { background: #fff; color: var(--hitam); border-radius: var(--r); padding: 40px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.ajakan__kartu h3 { font-size: 36px; margin: 0; }
+.ajakan__kartu p { color: var(--abu); margin: 0; max-width: 300px; }
+.ajakan__besar { font-size: clamp(38px, 5.6vw, 76px); }
+.ajakan__besar span { color: var(--hijau); }
+.ajakan__tombol { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+/* kaki */
+.kaki { margin: 90px 10px 10px; background: #fff; color: var(--hitam); border-radius: var(--r); padding: 48px 40px 26px; }
+.kaki__atas { display: flex; flex-wrap: wrap; gap: 24px 32px; justify-content: space-between; align-items: flex-start; }
+.kaki__merek { font-size: clamp(64px, 12vw, 170px); }
+.kaki__kontak { font-size: 14px; color: var(--abu); max-width: 300px; margin: 0; }
+.kaki__kolom { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; }
+.kaki__kolom h4 { font: 500 22px "Archivo", sans-serif; margin: 0 0 8px; }
+.kaki__kolom a { display: block; font-size: 13.5px; color: var(--abu); text-decoration: none; margin: 3px 0; }
+.kaki__kolom a:hover { color: var(--hitam); text-decoration: underline; }
+.kaki__halus { font-size: 12px; color: var(--abu); margin: 40px 0 0; border-top: 1px solid var(--garis); padding-top: 16px; }
+
+@media (max-width: 900px) {
+  .nav__tautan { display: none; }
+  .nav__dalam { padding: 16px var(--tepi); }
+  .hero { min-height: 0; padding-bottom: 230px; }
+  .hero__judul { padding-top: 92px; }
+  .t1 { width: 170px; left: -20px; top: auto; bottom: 26px; }
+  .t2 { width: 160px; right: -16px; top: auto; bottom: 64px; }
+  .t3, .t4 { display: none; }
+  .bagian { padding: 70px var(--tepi) 20px; }
+  .ubin { grid-template-columns: 1fr; }
+  .ubin figure { aspect-ratio: 16 / 11; }
+  .ajakan { grid-template-columns: 1fr; padding: 0 var(--tepi); }
+  .kaki { padding: 32px 22px 20px; }
+  .kaki__kolom { grid-template-columns: repeat(2, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pita__isi, .terbang { animation: none; }
+  .terbang { transform: rotate(var(--rot)); }
+}
+</style>
+</head>
+<body data-halaman="masuk">
+<a class="skip" href="#form-masuk">Langsung ke formulir masuk</a>
+
+<div class="pita" aria-hidden="true"><div class="pita__isi">
+  <span>Akun member dikirim otomatis setelah pembelian</span><span>Tryout SKD format resmi 550 soal</span><span>Game latihan langsung di browser</span><span>Materi PDF + pembahasan</span>
+  <span>Akun member dikirim otomatis setelah pembelian</span><span>Tryout SKD format resmi 550 soal</span><span>Game latihan langsung di browser</span><span>Materi PDF + pembahasan</span>
+</div></div>
+
+<header class="nav">
+  <div class="nav__dalam">
+    <a class="logo" href="./" aria-label="mzakom digital, beranda">mzakom</a>
+    <nav class="nav__tautan" aria-label="Utama">
+      <a href="./#produk">Semua Produk</a>
+      <a href="cpns.html">Tryout CPNS</a>
+      <a href="coba-gratis.html">Coba Gratis</a>
+    </nav>
+    <span class="nav__kanan"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="currentColor"/></svg>Masuk</span>
   </div>
 </header>
 
-<main id="isi" class="page">
-  <div class="wrap">
-    <div class="page__narrow page__form">
-      <h1>Masuk.</h1>
-      <p class="lede">Pakai nama pengguna dan kata sandi yang kamu terima setelah pembelian.</p>
+<main id="isi">
+  <section class="hero">
+    <h1 class="display hero__judul">Lanjut<br>Latihan</h1>
+    <p class="hero__sub">Masuk ke area member untuk membuka tryout, game latihan, dan materi yang sudah kamu beli.</p>
 
-      <form class="form" id="form-masuk" novalidate>
+    <div class="terbang t1" aria-hidden="true"><img src="assets/img/tryout-web.webp" alt=""></div>
+    <div class="terbang t2" aria-hidden="true"><img src="assets/img/game-tembak.webp" alt=""></div>
+    <div class="terbang t3" aria-hidden="true"><img src="assets/img/pdf-paket.webp" alt=""></div>
+    <div class="terbang t4" aria-hidden="true"><img src="assets/img/game-kuis.webp" alt=""></div>
+
+    <div class="kartu">
+      <h2 class="display">Buka Akses Member</h2>
+      <p class="lede">Pakai nama pengguna dan kata sandi yang kamu terima setelah pembelian.</p>
+      <form id="form-masuk" novalidate>
         <div class="field">
           <label for="nama">Nama pengguna</label>
           <input id="nama" name="nama" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
@@ -46,29 +174,51 @@
           <label class="check"><input type="checkbox" id="lihat"> Tampilkan kata sandi</label>
         </div>
         <p class="msg" id="msg" role="alert"></p>
-        <button class="btn" id="btn-masuk" type="submit">Masuk</button>
+        <button class="tombol tombol--isi" id="btn-masuk" type="submit">Masuk</button>
       </form>
-
-      <p class="page__p page__after">Belum punya akun? <a href="./#produk">Lihat produk</a>, atau <a href="coba-gratis.html">coba 10 soal gratis</a> dulu.</p>
-      <p class="page__p" id="lupa" hidden>Lupa kata sandi? <a id="lupa-tautan" href="#">Hubungi kami</a> untuk reset.</p>
+      <p class="kartu__bawah">Belum punya akun? <a href="./#produk">Lihat produk</a> atau <a href="coba-gratis.html">coba 10 soal gratis</a>.</p>
+      <p class="kartu__bawah" id="lupa" hidden>Lupa kata sandi? <a id="lupa-tautan" href="#">Hubungi kami</a> untuk reset.</p>
+      <p class="catatan">Membeli <b>Peta Capaian Kelas</b> atau <b>CBT Sekolah</b>? Aplikasinya dibuka lewat tautan dan akun Google masing-masing, bukan dari halaman ini.</p>
     </div>
-  </div>
+  </section>
+
+  <section class="bagian" aria-labelledby="judul-isi">
+    <h2 class="display bagian__judul" id="judul-isi"><small>Area member</small>Yang Menunggumu<br>di Dalam</h2>
+    <div class="ubin">
+      <a href="cpns.html"><figure class="w1"><img src="assets/img/tryout-web.webp" alt="Tampilan tryout web berwaktu"></figure>
+        <div class="ubin__kaki">Tryout Web <span class="panah" aria-hidden="true">↘</span></div></a>
+      <a href="cpns.html"><figure class="w2"><img src="assets/img/game-tembak.webp" alt="Game latihan soal di browser"></figure>
+        <div class="ubin__kaki">Game Latihan <span class="panah" aria-hidden="true">↘</span></div></a>
+      <a href="cpns.html"><figure class="w3"><img src="assets/img/pdf-ebook.webp" alt="Ebook dan paket soal PDF"></figure>
+        <div class="ubin__kaki">Ebook &amp; Paket Soal <span class="panah" aria-hidden="true">↘</span></div></a>
+    </div>
+  </section>
+
+  <section class="ajakan">
+    <div class="ajakan__kartu">
+      <h3 class="display">Belum Punya Akun?</h3>
+      <p>Pilih paket, bayar lewat Mayar, akun member langsung dikirim ke emailmu.</p>
+      <div class="ajakan__tombol">
+        <a class="tombol" href="./#produk">Lihat Produk</a>
+        <a class="tombol" href="coba-gratis.html">Coba Gratis</a>
+      </div>
+    </div>
+    <p class="display ajakan__besar">550 Soal SKD.<br>Satu Akun.<br><span>Latihan Kapan Saja.</span></p>
+  </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot__grid">
-    <div>
-      <p class="foot__mark">mzakom digital</p>
-      <p class="foot__tag">Bahan latihan SKD dan alat bantu guru, dibuat satu per satu.</p>
-    </div>
-    <nav class="foot__links" aria-label="Kaki halaman">
-      <a href="./">Beranda</a>
-      <a href="coba-gratis.html">Coba gratis</a>
-      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
-      <a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a>
-    </nav>
-    <p class="foot__fine">© 2026 mzakom digital. Tidak berafiliasi dengan BKN atau instansi pemerintah mana pun. Dilarang menyebarluaskan isi produk tanpa izin.</p>
+<footer class="kaki">
+  <div class="kaki__atas">
+    <p class="display kaki__merek">mzakom</p>
+    <p class="kaki__kontak">Bahan latihan SKD dan alat bantu guru, dibuat satu per satu.<br><a href="./">mzakom.my.id</a></p>
   </div>
+  <div class="kaki__kolom">
+    <div><h4>Produk</h4><a href="cpns.html">Tryout CPNS 2027</a><a href="cbt-sekolah.html">CBT Sekolah</a><a href="./#produk">Peta Capaian Kelas</a></div>
+    <div><h4>Mulai</h4><a href="coba-gratis.html">Coba 10 soal gratis</a><a href="./#produk">Semua produk</a></div>
+    <div><h4>Member</h4><a href="masuk.html">Masuk</a><a href="member.html">Area member</a></div>
+    <div><h4>Legal</h4><a href="kebijakan-privasi.html">Kebijakan Privasi</a><a href="syarat-dan-ketentuan.html">Syarat &amp; Ketentuan</a></div>
+  </div>
+  <p class="kaki__halus">© 2026 mzakom digital. Tidak berafiliasi dengan BKN atau instansi pemerintah mana pun. Dilarang menyebarluaskan isi produk tanpa izin.</p>
 </footer>
 </body>
 </html>
