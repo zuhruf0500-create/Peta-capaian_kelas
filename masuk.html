@@ -78,7 +78,13 @@ a { color: inherit; }
 .bagian { max-width: 1240px; margin: 0 auto; padding: 90px 32px 40px; }
 .bagian__judul { text-align: center; font-size: clamp(34px, 5vw, 56px); margin-bottom: 44px; }
 .bagian__judul small { display: block; font: 600 15px "Archivo", sans-serif; letter-spacing: 0; margin-bottom: 10px; color: var(--hijau); }
-.ubin { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.ubin { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.ubin__kaki small { display: block; font-size: 13px; opacity: .65; margin-top: 2px; }
+.w4 { background: linear-gradient(160deg, #22d39a, #064e3b); }
+.pilih { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: #f1f1f3; border-radius: 999px; padding: 4px; margin: 14px 0 16px; }
+.pilih button { border: 0; background: transparent; border-radius: 999px; padding: 9px 6px; font: 600 13px "Archivo", sans-serif; color: var(--abu); cursor: pointer; }
+.pilih button[aria-selected="true"] { background: var(--hitam); color: #fff; }
+.panel .tombol--isi { margin-top: 4px; }
 .ubin a { text-decoration: none; display: block; }
 .ubin figure { margin: 0; aspect-ratio: 4 / 5; border-radius: var(--r); overflow: hidden; display: grid; place-items: center; padding: 22px; }
 .ubin figure img { width: 100%; border-radius: 12px; transform: rotate(-4deg); box-shadow: 0 24px 50px rgba(0,0,0,.5); transition: transform .4s ease; }
@@ -109,8 +115,10 @@ a { color: inherit; }
 .kaki__kolom a:hover { color: var(--hitam); text-decoration: underline; }
 .kaki__halus { font-size: 12px; color: var(--abu); margin: 40px 0 0; border-top: 1px solid var(--garis); padding-top: 16px; }
 
+@media (max-width: 1100px) { .ubin { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 900px) {
   .nav__tautan { display: none; }
+  .nav__tautan + .nav__kanan { margin-left: auto; }
   .nav__dalam { padding: 16px var(--tepi); }
   .hero { min-height: 0; padding-bottom: 230px; }
   .hero__judul { padding-top: 92px; }
@@ -118,7 +126,7 @@ a { color: inherit; }
   .t2 { width: 160px; right: -16px; top: auto; bottom: 64px; }
   .t3, .t4 { display: none; }
   .bagian { padding: 70px var(--tepi) 20px; }
-  .ubin { grid-template-columns: 1fr; }
+  .ubin { grid-template-columns: minmax(0, 1fr); }
   .ubin figure { aspect-ratio: 16 / 11; }
   .ajakan { grid-template-columns: 1fr; padding: 0 var(--tepi); }
   .kaki { padding: 32px 22px 20px; }
@@ -134,8 +142,8 @@ a { color: inherit; }
 <a class="skip" href="#form-masuk">Langsung ke formulir masuk</a>
 
 <div class="pita" aria-hidden="true"><div class="pita__isi">
-  <span>Akun member dikirim otomatis setelah pembelian</span><span>Tryout SKD format resmi 550 soal</span><span>Game latihan langsung di browser</span><span>Materi PDF + pembahasan</span>
-  <span>Akun member dikirim otomatis setelah pembelian</span><span>Tryout SKD format resmi 550 soal</span><span>Game latihan langsung di browser</span><span>Materi PDF + pembahasan</span>
+  <span>Tryout CPNS: 550 soal SKD format resmi</span><span>Peta Capaian Kelas: 22 dokumen administrasi guru</span><span>CBT Sekolah: ujian online dengan nama sekolah sendiri</span><span>Akun dikirim otomatis setelah pembelian</span>
+  <span>Tryout CPNS: 550 soal SKD format resmi</span><span>Peta Capaian Kelas: 22 dokumen administrasi guru</span><span>CBT Sekolah: ujian online dengan nama sekolah sendiri</span><span>Akun dikirim otomatis setelah pembelian</span>
 </div></div>
 
 <header class="nav">
@@ -144,7 +152,8 @@ a { color: inherit; }
     <nav class="nav__tautan" aria-label="Utama">
       <a href="./#produk">Semua Produk</a>
       <a href="cpns.html">Tryout CPNS</a>
-      <a href="coba-gratis.html">Coba Gratis</a>
+      <a href="./#guru">Peta Capaian</a>
+      <a href="cbt-sekolah.html">CBT Sekolah</a>
     </nav>
     <span class="nav__kanan"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="currentColor"/></svg>Masuk</span>
   </div>
@@ -152,16 +161,23 @@ a { color: inherit; }
 
 <main id="isi">
   <section class="hero">
-    <h1 class="display hero__judul">Lanjut<br>Latihan</h1>
-    <p class="hero__sub">Masuk ke area member untuk membuka tryout, game latihan, dan materi yang sudah kamu beli.</p>
+    <h1 class="display hero__judul">Lanjut<br>Lagi</h1>
+    <p class="hero__sub">Pilih produk yang kamu beli, lalu masuk dan lanjutkan dari tempat terakhir.</p>
 
     <div class="terbang t1" aria-hidden="true"><img src="assets/img/tryout-web.webp" alt=""></div>
-    <div class="terbang t2" aria-hidden="true"><img src="assets/img/game-tembak.webp" alt=""></div>
-    <div class="terbang t3" aria-hidden="true"><img src="assets/img/pdf-paket.webp" alt=""></div>
-    <div class="terbang t4" aria-hidden="true"><img src="assets/img/game-kuis.webp" alt=""></div>
+    <div class="terbang t2" aria-hidden="true"><img src="assets/img/peta-capaian.webp" alt=""></div>
+    <div class="terbang t3" aria-hidden="true"><img src="assets/img/game-tembak.webp" alt=""></div>
+    <div class="terbang t4" aria-hidden="true"><img src="assets/img/cbt-beranda.webp" alt=""></div>
 
     <div class="kartu">
-      <h2 class="display">Buka Akses Member</h2>
+      <h2 class="display">Buka Akses Produkmu</h2>
+      <div class="pilih" role="tablist" aria-label="Pilih produk">
+        <button type="button" role="tab" id="tab-cpns" aria-controls="p-cpns" aria-selected="true">Tryout CPNS</button>
+        <button type="button" role="tab" id="tab-peta" aria-controls="p-peta" aria-selected="false" tabindex="-1">Peta Capaian</button>
+        <button type="button" role="tab" id="tab-cbt" aria-controls="p-cbt" aria-selected="false" tabindex="-1">CBT Sekolah</button>
+      </div>
+
+      <div class="panel" id="p-cpns" role="tabpanel" aria-labelledby="tab-cpns">
       <p class="lede">Pakai nama pengguna dan kata sandi yang kamu terima setelah pembelian.</p>
       <form id="form-masuk" novalidate>
         <div class="field">
@@ -178,32 +194,48 @@ a { color: inherit; }
       </form>
       <p class="kartu__bawah">Belum punya akun? <a href="./#produk">Lihat produk</a> atau <a href="coba-gratis.html">coba 10 soal gratis</a>.</p>
       <p class="kartu__bawah" id="lupa" hidden>Lupa kata sandi? <a id="lupa-tautan" href="#">Hubungi kami</a> untuk reset.</p>
-      <p class="catatan">Membeli <b>Peta Capaian Kelas</b> atau <b>CBT Sekolah</b>? Aplikasinya dibuka lewat tautan dan akun Google masing-masing, bukan dari halaman ini.</p>
+      </div>
+
+      <div class="panel" id="p-peta" role="tabpanel" aria-labelledby="tab-peta" hidden>
+        <p class="lede">Peta Capaian Kelas dibuka dengan <b>akun Google (Gmail)</b> yang kamu pakai saat membeli. Tidak perlu nama pengguna atau kata sandi.</p>
+        <a class="tombol tombol--isi" href="https://script.google.com/macros/s/AKfycbzsHZdrtxZs5hWUSgip2N1dyLi_LEMVTs1Ya_yp1q5JWG6DWAUrBGXzmz3i8FQUcI70ng/exec" target="_blank" rel="noopener">Buka Peta Capaian Kelas</a>
+        <p class="catatan">Muncul halaman beli padahal sudah bayar? Pastikan kamu login dengan Gmail yang sama seperti saat membeli, atau ganti akun lewat tautan "Ganti akun Google" di halaman itu.</p>
+        <p class="kartu__bawah">Belum punya? <a href="./#guru">Lihat Peta Capaian Kelas</a>.</p>
+      </div>
+
+      <div class="panel" id="p-cbt" role="tabpanel" aria-labelledby="tab-cbt" hidden>
+        <p class="lede">CBT Sekolah berjalan di <b>alamat situs sekolahmu sendiri</b>. Guru dan siswa masuk dari alamat itu, bukan dari halaman ini.</p>
+        <a class="tombol tombol--isi" href="cbt-sekolah.html">Lihat panduan CBT Sekolah</a>
+        <p class="catatan">Lupa alamat situs sekolahmu? Cek email pembelian atau tanyakan ke admin sekolah yang memasang.</p>
+        <p class="kartu__bawah">Belum punya? <a href="cbt-sekolah.html">Lihat CBT Sekolah</a>.</p>
+      </div>
     </div>
   </section>
 
   <section class="bagian" aria-labelledby="judul-isi">
-    <h2 class="display bagian__judul" id="judul-isi"><small>Area member</small>Yang Menunggumu<br>di Dalam</h2>
+    <h2 class="display bagian__judul" id="judul-isi"><small>Produk mzakom</small>Pilih Produkmu</h2>
     <div class="ubin">
       <a href="cpns.html"><figure class="w1"><img src="assets/img/tryout-web.webp" alt="Tampilan tryout web berwaktu"></figure>
-        <div class="ubin__kaki">Tryout Web <span class="panah" aria-hidden="true">↘</span></div></a>
-      <a href="cpns.html"><figure class="w2"><img src="assets/img/game-tembak.webp" alt="Game latihan soal di browser"></figure>
-        <div class="ubin__kaki">Game Latihan <span class="panah" aria-hidden="true">↘</span></div></a>
-      <a href="cpns.html"><figure class="w3"><img src="assets/img/pdf-ebook.webp" alt="Ebook dan paket soal PDF"></figure>
-        <div class="ubin__kaki">Ebook &amp; Paket Soal <span class="panah" aria-hidden="true">↘</span></div></a>
+        <div class="ubin__kaki"><span>Tryout CPNS<small>Untuk pejuang CPNS</small></span><span class="panah" aria-hidden="true">↘</span></div></a>
+      <a href="./#guru"><figure class="w2"><img src="assets/img/peta-capaian.webp" alt="Halaman Administrasi Peta Capaian Kelas"></figure>
+        <div class="ubin__kaki"><span>Peta Capaian Kelas<small>Untuk guru</small></span><span class="panah" aria-hidden="true">↘</span></div></a>
+      <a href="cbt-sekolah.html"><figure class="w4"><img src="assets/img/cbt-beranda.webp" alt="Beranda aplikasi CBT Sekolah"></figure>
+        <div class="ubin__kaki"><span>CBT Sekolah<small>Untuk sekolah</small></span><span class="panah" aria-hidden="true">↘</span></div></a>
+      <a href="cpns.html"><figure class="w3"><img src="assets/img/game-tembak.webp" alt="Game latihan soal di browser"></figure>
+        <div class="ubin__kaki"><span>Game Latihan<small>Termasuk paket Lengkap</small></span><span class="panah" aria-hidden="true">↘</span></div></a>
     </div>
   </section>
 
   <section class="ajakan">
     <div class="ajakan__kartu">
       <h3 class="display">Belum Punya Akun?</h3>
-      <p>Pilih paket, bayar lewat Mayar, akun member langsung dikirim ke emailmu.</p>
+      <p>Pilih produk, bayar lewat Mayar, akses langsung dikirim ke emailmu.</p>
       <div class="ajakan__tombol">
         <a class="tombol" href="./#produk">Lihat Produk</a>
         <a class="tombol" href="coba-gratis.html">Coba Gratis</a>
       </div>
     </div>
-    <p class="display ajakan__besar">550 Soal SKD.<br>Satu Akun.<br><span>Latihan Kapan Saja.</span></p>
+    <p class="display ajakan__besar">Untuk Pejuang CPNS.<br>Untuk Guru.<br><span>Untuk Sekolah.</span></p>
   </section>
 </main>
 
@@ -220,5 +252,24 @@ a { color: inherit; }
   </div>
   <p class="kaki__halus">© 2026 mzakom digital. Tidak berafiliasi dengan BKN atau instansi pemerintah mana pun. Dilarang menyebarluaskan isi produk tanpa izin.</p>
 </footer>
+<script>
+// Tab produk: Tryout CPNS (formulir), Peta Capaian (akun Google), CBT Sekolah (situs sekolah). #peta / #cbt membuka tab langsung.
+(function () {
+  var tabs = [].slice.call(document.querySelectorAll('.pilih [role=tab]'));
+  function pilih(t, fokus) {
+    tabs.forEach(function (x) { var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+    if (fokus) t.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { pilih(t); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { e.preventDefault(); pilih(tabs[(i + d + tabs.length) % tabs.length], true); }
+    });
+  });
+  var awal = { '#peta': 1, '#cbt': 2 }[location.hash];
+  if (awal) pilih(tabs[awal]);
+})();
+</script>
 </body>
 </html>
